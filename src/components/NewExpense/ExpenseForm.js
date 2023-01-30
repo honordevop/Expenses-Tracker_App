@@ -75,35 +75,3 @@ const ExpenseForm = (props) => {
 };
 
 export default ExpenseForm;
-
-/*
-const [userInput, setUserInput] = useState({
-enteredTitle: '',
-enteredDate: '',
-enteredAmount: ''
-}
-
-
-const enteredTitleHandler = (event) {
-...userInput,
-enteredTitle: event.target.value
-}
-
-const enteredAmountHandler = (event) {
-...userInput,
-enteredAmount: event.target.value
-}
-
-const enteredDateHandler = (event) {
-...userInput,
-enteredDate: event.target.value
-}
-
-The method used by depending on former states above is not accurate, for better accuracy of getting prevState use the method bellow;
-
-const enteredDateHandler = (event) =>
-setUserInput((prevState) => {
-retur {...prevState, enteredDate: event.target.value }
-}
-
-*/
