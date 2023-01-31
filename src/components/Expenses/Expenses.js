@@ -18,30 +18,19 @@ const Expenses = (expenses) => {
     // <h2>Expenses</h2>
 
     <Card className="expenses">
-      <ExpensesFilter selectedYear={filterDate} onFilteredDate = {filterDateHandler}/>
-      <ExpenseItem
-        title={expenses.data[0].title}
-        amount={expenses.data[0].amount}
-        date={expenses.data[0].date}
-      ></ExpenseItem>
-      <ExpenseItem
-        title={expenses.data[1].title}
-        amount={expenses.data[1].amount}
-        date={expenses.data[1].date}
-      ></ExpenseItem>
-      <ExpenseItem
-        title={expenses.data[2].title}
-        amount={expenses.data[2].amount}
-        date={expenses.data[2].date}
-      ></ExpenseItem>
-      <ExpenseItem
-        title={expenses.data[3].title}
-        amount={expenses.data[3].amount}
-        date={expenses.data[3].date}
-      ></ExpenseItem>
+      <ExpensesFilter
+        selectedYear={filterDate}
+        onFilteredDate={filterDateHandler}
+      />
+      {expenses.data.map((expense) => (
+        <ExpenseItem key={expense.id}
+          title={expense.title}
+          amount={expense.amount}
+          date={expense.date}
+        />
+      ))}
       <Card></Card>
     </Card>
-    
   );
 }
 
