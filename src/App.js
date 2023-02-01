@@ -36,15 +36,15 @@ const App = () => {
         enteredData,
         ...prevExpenses
     ]})
-    // console.log(enteredData)
-    // console.log(expenses)
+    console.log(enteredData)
+    console.log(expenses)
   }
 
   return (
     <div>
       <NewExpense onSaveNewExpenses = {addNewExpenseHandler}/>
 
-      <Expenses data={expenses}/>
+      <Expenses data={expenses} />
       
     </div>
   );
